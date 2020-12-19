@@ -94,7 +94,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="cvz-Ja-JPJ" id="nJ4-q1-pXI"/>
-                        <outlet property="tipControl" destination="fMn-bA-zLf" id="QV6-nV-y8Z"/>
+                        <outlet property="segTitles" destination="fMn-bA-zLf" id="jxW-OZ-5sE"/>
+                        <outlet property="tipControl" destination="fMn-bA-zLf" id="dO8-NJ-J7A"/>
                         <outlet property="tipLabel" destination="o3L-qt-fw3" id="T1b-UE-1eQ"/>
                         <outlet property="totalLabel" destination="QoI-vg-2wd" id="fbl-h4-avs"/>
                     </connections>
@@ -147,16 +148,6 @@
                                     <action selector="setFieldOne:" destination="Sfd-aC-rEF" eventType="editingChanged" id="X9w-J4-awd"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuz-wU-CBq">
-                                <rect key="frame" x="253" y="210" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Preset 2 Field"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="setFieldTwo:" destination="Sfd-aC-rEF" eventType="editingChanged" id="2YN-3N-1WS"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-hM-W0R">
                                 <rect key="frame" x="253" y="272" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,6 +158,15 @@
                                     <action selector="setFieldThree:" destination="Sfd-aC-rEF" eventType="editingChanged" id="cEe-wL-RO3"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-Nb-NKU">
+                                <rect key="frame" x="253" y="204" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setFieldTwo:" destination="Sfd-aC-rEF" eventType="editingChanged" id="Fl7-oc-ivz"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rA7-ni-9fT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,7 +175,7 @@
                     <connections>
                         <outlet property="presetOne" destination="YlH-ha-z88" id="VbE-8H-L4W"/>
                         <outlet property="presetThree" destination="gIG-hM-W0R" id="3WF-XX-LyG"/>
-                        <outlet property="presetTwo" destination="gIG-hM-W0R" id="dQG-u8-gdD"/>
+                        <outlet property="presetTwo" destination="LbW-Nb-NKU" id="tS3-qm-QfP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJC-PN-Fet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var presetOne: UITextField!
@@ -16,7 +17,6 @@ class SettingsViewController: UIViewController {
     @IBAction func setFieldOne(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(presetOne.text, forKey: "presOne")
-        //print("here")
         defaults.synchronize()
         print("presetOne successfully set")
     }
@@ -27,7 +27,6 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
         print("presetTwo successfully set")
     }
-    
     @IBAction func setFieldThree(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(presetThree.text, forKey: "presThree")
@@ -38,6 +37,13 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        presetOne.placeholder = (defaults.string(forKey: "presOne") ?? "0") + "%"
+        presetTwo.placeholder = (defaults.string(forKey: "presTwo") ?? "0") + "%"
+        presetThree.placeholder = (defaults.string(forKey: "presThree") ?? "0") + "%"
     }
     
 
