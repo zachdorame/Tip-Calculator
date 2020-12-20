@@ -36,6 +36,9 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         presetOne.placeholder = (defaults.string(forKey: "presOne") ?? "0") + "%"
