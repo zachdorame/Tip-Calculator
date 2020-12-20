@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("THE VIEW DID LOAD REEEEEE")
         // Check if this is the first time the app has been opened
         // if so, set tipPercentages values to their defaults
         let defaults = UserDefaults.standard
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
             defaults.set(15, forKey: "presOne")
             defaults.set(18, forKey: "presTwo")
             defaults.set(20, forKey: "presThree")
-            //print("here")
             defaults.synchronize()
             print("tipPercentages set for the first time")
             UserDefaults.standard.set(true, forKey: "firstLaunch")
@@ -54,7 +52,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTap(_ sender: Any) {
-        print("reeee")
         view.endEditing(true)
     }
     

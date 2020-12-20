@@ -18,20 +18,17 @@ class SettingsViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(presetOne.text, forKey: "presOne")
         defaults.synchronize()
-        print("presetOne successfully set")
     }
     
     @IBAction func setFieldTwo(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(presetTwo.text, forKey: "presTwo")
         defaults.synchronize()
-        print("presetTwo successfully set")
     }
     @IBAction func setFieldThree(_ sender: Any) {
         let defaults = UserDefaults.standard
         defaults.set(presetThree.text, forKey: "presThree")
         defaults.synchronize()
-        print("presetThree successfully set")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
